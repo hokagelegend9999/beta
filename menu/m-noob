@@ -75,10 +75,10 @@ read -p "Password: " pass
 read -p "Exp (0 for unlimited days):" exp
 read -p "IP LIMIT " ip
 
-if [ ! -e /etc/HokageLegendstore/limit/noobs/ip/ ]; then
-  mkdir -p /etc/HokageLegendstore/limit/noobs/ip/
+if [ ! -e /etc/HokageLegendstore/limit/hokage/ip/ ]; then
+  mkdir -p /etc/HokageLegendstore/limit/hokage/ip/
 fi
-echo "$ip" > /etc/HokageLegendstore/limit/noobs/ip/$user
+echo "$ip" > /etc/HokageLegendstore/limit/hokage/ip/$user
 
 HOKAGE --add-user $user $pass --expired-user $user $exp
 
