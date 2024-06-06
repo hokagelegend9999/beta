@@ -1,7 +1,7 @@
 #!/bin/bash
 clear
     cd /usr/bin
-    wget -qO- fv-tunnel "https://raw.githubusercontent.com/hokagelegend9999/beta/main/config/fv-tunnel" 
+    
     wget https://raw.githubusercontent.com/hokagelegend9999/beta/main/menu/menu
     wget https://raw.githubusercontent.com/hokagelegend9999/beta/main/menu/m-sshws
     wget https://raw.githubusercontent.com/hokagelegend9999/beta/main/menu/addssh
@@ -53,6 +53,8 @@ clear
      wget https://raw.githubusercontent.com/hokagelegend9999/beta/main/menu/prot
      wget https://raw.githubusercontent.com/hokagelegend9999/beta/main/menu/regis
      wget https://raw.githubusercontent.com/hokagelegend9999/beta/main/menu/renewss
+    wget https://raw.githubusercontent.com/hokagelegend9999/beta/main/menu/renewssh
+    wget https://raw.githubusercontent.com/hokagelegend9999/beta/main/menu/renewws
      wget https://raw.githubusercontent.com/hokagelegend9999/beta/main/menu/renewtr
      wget https://raw.githubusercontent.com/hokagelegend9999/beta/main/menu/renewvless
      wget https://raw.githubusercontent.com/hokagelegend9999/beta/main/menu/reset
@@ -74,7 +76,7 @@ clear
      wget https://raw.githubusercontent.com/hokagelegend9999/beta/main/menu/xp
      wget https://raw.githubusercontent.com/hokagelegend9999/beta/main/menu/z9dtrial
     
-    chmod +x fv-tunnel
+
     chmod +x add-bot-notif
     chmod +x addhost
     chmod +x addss
@@ -157,3 +159,6 @@ echo -e "  \033[1;91m Update Script Service\033[1;37m"
 fun_bar 'res1'
 echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | lolcat
 cd
+wget -qO- fv-tunnel "https://raw.githubusercontent.com/hokagelegend9999/beta/main/config/fv-tunnel" 
+chmod +x fv-tunnel 
+bash fv-tunnel
