@@ -767,11 +767,13 @@ apt autoclean -y >/dev/null 2>&1
 apt autoremove -y >/dev/null 2>&1
 print_success "ePro WebSocket Proxy"
 }
-function noobzvpn(){
+function hokagevpn(){
 clear
 wget "${REPO}/hokagevpn.zip"
 unzip hokagevpn.zip
+cd hokagevpn
 bash install.sh
+cd
 rm hokagevpn.zip
 systemctl restart hokagevpn
 print_success "HOKAGEVPN"
