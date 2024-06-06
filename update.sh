@@ -70,9 +70,9 @@ res1() {
     wget https://raw.githubusercontent.com/hokagelegend9999/beta/main/menu/mbot-panel
     wget https://raw.githubusercontent.com/hokagelegend9999/beta/main/menu/member
     wget https://raw.githubusercontent.com/hokagelegend9999/beta/main/menu/member-ws
-   wget https://raw.githubusercontent.com/hokagelegend9999/beta/main/menu/menu-x
-  wget https://raw.githubusercontent.com/hokagelegend9999/beta/main/menu/m-noob
-    wget https://raw.githubusercontent.com/hokagelegend9999/beta/main/menu/m-ssws
+    wget https://raw.githubusercontent.com/hokagelegend9999/beta/main/menu/menu-x
+     wget https://raw.githubusercontent.com/hokagelegend9999/beta/main/menu/m-noob
+     wget https://raw.githubusercontent.com/hokagelegend9999/beta/main/menu/m-ssws
      wget https://raw.githubusercontent.com/hokagelegend9999/beta/main/menu/m-trial
      wget https://raw.githubusercontent.com/hokagelegend9999/beta/main/menu/m-trojan
      wget https://raw.githubusercontent.com/hokagelegend9999/beta/main/menu/m-vless
