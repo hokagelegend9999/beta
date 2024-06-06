@@ -15,9 +15,9 @@ mv bot/* /usr/bin
 chmod +x /usr/bin/*
 rm -rf bot.zip
 clear
-wget https://raw.githubusercontent.com/hokagelegend9999/alpha/main/bot/kyt.zip
-unzip kyt.zip
-pip3 install -r kyt/requirements.txt
+wget https://raw.githubusercontent.com/hokagelegend9999/alpha/main/bot/hokage.zip
+unzip hokage.zip
+pip3 install -r hokage/requirements.txt
 
 clear
 echo ""
@@ -30,32 +30,32 @@ echo -e "${grenbo}[*] Info Id Telegram : @MissRose_bot , perintah /info${NC}"
 echo -e "\033[1;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 read -e -p "[*] Input your Bot Token : " bottoken
 read -e -p "[*] Input Your Id Telegram : " admin
-echo -e BOT_TOKEN='"'$bottoken'"' >> /usr/bin/kyt/var.txt
-echo -e ADMIN='"'$admin'"' >> /usr/bin/kyt/var.txt
-echo -e DOMAIN='"'$domain'"' >> /usr/bin/kyt/var.txt
-echo -e PUB='"'$PUB'"' >> /usr/bin/kyt/var.txt
-echo -e HOST='"'$NS'"' >> /usr/bin/kyt/var.txt
+echo -e BOT_TOKEN='"'$bottoken'"' >> /usr/bin/hokage/var.txt
+echo -e ADMIN='"'$admin'"' >> /usr/bin/hokage/var.txt
+echo -e DOMAIN='"'$domain'"' >> /usr/bin/hokage/var.txt
+echo -e PUB='"'$PUB'"' >> /usr/bin/hokage/var.txt
+echo -e HOST='"'$NS'"' >> /usr/bin/hokage/var.txt
 clear
 
-cat > /etc/systemd/system/kyt.service << END
+cat > /etc/systemd/system/hokage.service << END
 [Unit]
-Description=Simple kyt - @kyt
+Description=Simple hokage - @hokage
 After=network.target
 
 [Service]
 WorkingDirectory=/usr/bin
-ExecStart=/usr/bin/python3 -m kyt
+ExecStart=/usr/bin/python3 -m hokage
 Restart=always
 
 [Install]
 WantedBy=multi-user.target
 END
 
-systemctl start kyt 
-systemctl enable kyt
-systemctl restart kyt
+systemctl start hokage 
+systemctl enable hokage
+systemctl restart hokage
 cd /root
-rm -rf kyt.sh
+rm -rf bot.sh
 echo "Done"
 echo "Your Data Bot"
 echo -e "==============================="
