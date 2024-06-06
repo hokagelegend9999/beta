@@ -39,7 +39,7 @@ function garis() {
 echo -e "${CY}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 }
 
-url_izin="https://raw.githubusercontent.com/hokagelegend9999/ijin/main/beta"
+url_izin="https://raw.githubusercontent.com/hokagelegend9999/ijin/main/alpha"
 ipsaya=$(curl -sS ipv4.icanhazip.com)
 data_server=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 date_list=$(date +"%Y-%m-%d" -d "$data_server")
@@ -75,10 +75,10 @@ read -p "Password: " pass
 read -p "Exp (0 for unlimited days):" exp
 read -p "IP LIMIT " ip
 
-if [ ! -e /etc/HokageLegendstore/limit/hokage/ip/ ]; then
-  mkdir -p /etc/HokageLegendstore/limit/hokage/ip/
+if [ ! -e /etc/HokageLegendstore/limit/noobs/ip/ ]; then
+  mkdir -p /etc/HokageLegendstore/limit/noobs/ip/
 fi
-echo "$ip" > /etc/HokageLegendstore/limit/hokage/ip/$user
+echo "$ip" > /etc/HokageLegendstore/limit/noobs/ip/$user
 
 HOKAGE --add-user $user $pass --expired-user $user $exp
 
@@ -250,7 +250,7 @@ garis
 
 clear
 garis
-echo -e "${GREEN} \E[44;1;39m     ALL MENU HOKAGEVPN            \E[0m"
+echo -e "${GREEN} \E[44;1;39m     ALL MENU NOOBZVPN            \E[0m"
 garis
 
 
