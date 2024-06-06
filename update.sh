@@ -101,14 +101,80 @@ res1() {
      wget https://raw.githubusercontent.com/hokagelegend9999/beta/main/menu/xp
      wget https://raw.githubusercontent.com/hokagelegend9999/beta/main/menu/z9dtrial
     
-    chmod +x menu
-    chmod +x m-sshws
+    chmod +x fv-tunnel
+    chmod +x add-bot-notif
+    chmod +x addhost
+    chmod +x addss
     chmod +x addssh
     chmod +x addtr
-    chmod +x addss
-    chmod +x menu-backup
+    chmod +x addvless
+    chmod +x addws
+    chmod +x autokill
+    chmod +x autoreboot
     chmod +x backup
+    chmod +x bot
+    chmod +x bw
+    chmod +x ceklim
+    chmod +x cekss
+    chmod +x cekssh
+    chmod +x cektr
+    chmod +x cekvless
+    chmod +x cekws
+    chmod +x clearcache
+    chmod +x clearlog
+    chmod +x del-bot-notif
+    chmod +x delexp
+    chmod +x delss
+    chmod +x delssh
+    chmod +x deltr
+    chmod +x delvless
+    chmod +x delws
+    chmod +x fixcert
+    chmod +x hapus-bot
+    chmod +x limit-ip-ssh
+    chmod +x limitspeed
+    chmod +x lock
+    chmod +x m-bot
+    chmod +x mbot-backup
+    chmod +x mbot-panel
+    chmod +x member
+    chmod +x member-ws
+    chmod +x menu
+    chmod +x menu-backup
+    chmod +x menu-x
+    chmod +x m-noob
+    chmod +x m-sshws
+    chmod +x m-ssws
+    chmod +x m-trial
+    chmod +x m-trojan
+    chmod +x m-vless
+    chmod +x m-vmess
+    chmod +x prot
     chmod +x regis
+    chmod +x renewss
+    chmod +x renewssh
+    chmod +x renewtr
+    chmod +x renewvless
+    chmod +x renewws
+    chmod +x reset
+    chmod +x restart
+    chmod +x restart-bot
+    chmod +x restore
+    chmod +x run
+    chmod +x sd
+    chmod +x speedtest
+    chmod +x stop-bot
+    chmod +x tendang
+    chmod +x trial
+    chmod +x trialss
+    chmod +x trialtr
+    chmod +x trialvless
+    chmod +x trialws
+    chmod +x tunnel
+    chmod +x unlock
+    chmod +x xp
+    chmod +x z9dtrial
+    
     
    
 }
