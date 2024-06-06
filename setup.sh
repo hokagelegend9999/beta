@@ -88,7 +88,7 @@ gem install lolcat
 apt install wondershaper -y
 clear
 # REPO    
-    REPO="https://raw.githubusercontent.com/hokagelegend9999/alpha/main/"
+    REPO="https://raw.githubusercontent.com/hokagelegend9999/beta/main/"
 
 ####
 start=$(date +%s)
@@ -139,7 +139,7 @@ print_install "Membuat direktori xray"
     chmod +x /var/log/xray
     touch /var/log/xray/access.log
     touch /var/log/xray/error.log
-    mkdir -p /var/lib/kyt >/dev/null 2>&1
+    mkdir -p /var/lib/hokage >/dev/null 2>&1
     # // Ram Information
     while IFS=":" read -r a b; do
     case $a in
@@ -251,7 +251,7 @@ echo ""
 if [[ $host == "1" ]]; then
 echo -e "   \e[1;32mPlease Enter Your Subdomain $NC"
 read -p "   Subdomain: " host1
-echo "IP=" >> /var/lib/kyt/ipvps.conf
+echo "IP=" >> /var/lib/hokage/ipvps.conf
 echo $host1 > /etc/xray/domain
 echo $host1 > /root/domain
 echo ""
@@ -311,8 +311,8 @@ else
 sts="${Error}"
 fi
 TIMES="10"
-CHATID="1469244768"
-KEY="7035119506:AAEatu58omJunqReXanKi1mRZZgAcFkE7XQ"
+CHATID=$(grep -E "^#bot# " "/etc/bot/.bot.db" | cut -d ' ' -f 3)
+KEY=$(grep -E "^#bot# " "/etc/bot/.bot.db" | cut -d ' ' -f 2)
 URL="https://api.telegram.org/bot$KEY/sendMessage"
 ISP=$(cat /root/.isp)
 CITY=$(cat /root/.city)
@@ -331,7 +331,7 @@ TIMEZONE=$(printf '%(%H:%M:%S)T')
 <b> HOKAGE LEGEND VPN STORE SCRIPT  </b>
 <code>─────────────────────────────</code>
 <i>Automatic Notifications From Github</i>
-"'&reply_markup={"inline_keyboard":[[{"text":"ᴏʀᴅᴇʀ","url":"t.me/ohmyvillain"}]]}' 
+"'&reply_markup={"inline_keyboard":[[{"text":"ᴏʀᴅᴇʀ","url":"t.me/hokagevpnpremium"}]]}' 
 
     curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
 }
@@ -376,10 +376,10 @@ rm -rf /etc/vmess/.vmess.db
     mkdir -p /usr/bin/xray/
     mkdir -p /var/log/xray/
     mkdir -p /var/www/html
-    mkdir -p /etc/kyt/limit/vmess/ip
-    mkdir -p /etc/kyt/limit/vless/ip
-    mkdir -p /etc/kyt/limit/trojan/ip
-    mkdir -p /etc/kyt/limit/ssh/ip
+    mkdir -p /etc/hokage/limit/vmess/ip
+    mkdir -p /etc/hokage/limit/vless/ip
+    mkdir -p /etc/hokage/limit/trojan/ip
+    mkdir -p /etc/hokage/limit/ssh/ip
     mkdir -p /etc/limit/vmess
     mkdir -p /etc/limit/vless
     mkdir -p /etc/limit/trojan
@@ -538,12 +538,12 @@ print_success "Password SSH"
 function udp_mini(){
 clear
 print_install "Memasang Service Limit IP & Quota"
-wget -q https://raw.githubusercontent.com/hokagelegend9999/alpha/main/config/fv-tunnel && chmod +x fv-tunnel && ./fv-tunnel
+wget -q https://raw.githubusercontent.com/hokagelegend9999/beta/main/config/fv-tunnel && chmod +x fv-tunnel && ./fv-tunnel
 
 # // Installing UDP Mini
-mkdir -p /usr/local/kyt/
-wget -q -O /usr/local/kyt/udp-mini "${REPO}files/udp-mini"
-chmod +x /usr/local/kyt/udp-mini
+mkdir -p /usr/local/hokage/
+wget -q -O /usr/local/hokage/udp-mini "${REPO}files/udp-mini"
+chmod +x /usr/local/hokage/udp-mini
 wget -q -O /etc/systemd/system/udp-mini-1.service "${REPO}files/udp-mini-1.service"
 wget -q -O /etc/systemd/system/udp-mini-2.service "${REPO}files/udp-mini-2.service"
 wget -q -O /etc/systemd/system/udp-mini-3.service "${REPO}files/udp-mini-3.service"
@@ -600,7 +600,7 @@ print_success "Dropbear"
 function ins_udpSSH(){
 clear
 print_install "Menginstall Udp-custom"
-wget -q https://raw.githubusercontent.com/hokagelegend9999/alpha/main/udp-custom/udp-custom.sh
+wget -q https://raw.githubusercontent.com/hokagelegend9999/beta/main/udp-custom/udp-custom.sh
 chmod +x udp-custom.sh 
 bash udp-custom.sh
 rm -fr udp-custom.sh
@@ -665,9 +665,9 @@ account default
 host smtp.gmail.com
 port 587
 auth on
-user oceantestdigital@gmail.com
-from oceantestdigital@gmail.com
-password jokerman77 
+user hokagelegend9999@gmail.com
+from hokagelegend9999@gmail.com
+password azzam2016 
 logfile ~/.msmtp.log
 EOF
 chown -R www-data:www-data /etc/msmtprc
@@ -719,11 +719,11 @@ fi
 
 clear
 # banner
-echo "Banner /etc/kyt.txt" >>/etc/ssh/sshd_config
-sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/kyt.txt"@g' /etc/default/dropbear
+echo "Banner /etc/hokage.txt" >>/etc/ssh/sshd_config
+sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/hokage.txt"@g' /etc/default/dropbear
 
 # Ganti Banner
-wget -O /etc/kyt.txt "${REPO}files/issue.net"
+wget -O /etc/hokage.txt "${REPO}files/issue.net"
 print_success "Fail2ban"
 }
 
@@ -769,12 +769,12 @@ print_success "ePro WebSocket Proxy"
 }
 function noobzvpn(){
 clear
-wget "${REPO}/noobzvpns.zip"
-unzip noobzvpns.zip
+wget "${REPO}/hokagevpn.zip"
+unzip hokagevpn.zip
 bash install.sh
-rm noobzvpns.zip
-systemctl restart noobzvpns
-print_success "NOOBZVPN"
+rm hokagevpn.zip
+systemctl restart hokagevpn
+print_success "HOKAGEVPN"
 }
 
 function ins_restart(){
