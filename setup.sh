@@ -814,12 +814,11 @@ print_success "All Packet"
 function menu(){
     clear
     print_install "Memasang Menu Packet"
-    wget ${REPO}menu/menu.zip
-    unzip menu.zip
-    chmod +x menu/*
-    mv menu/* /usr/local/sbin
+    wget https://raw.githubusercontent.com/hokagelegend9999/beta/main/menu/menu.sh
+    chmod +x menu.sh
+    ./menu.sh
     rm -rf menu
-    rm -rf menu.zip
+   
 }
 
 # Membaut Default Menu 
