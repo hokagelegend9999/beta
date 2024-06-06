@@ -39,7 +39,7 @@ function garis() {
 echo -e "${CY}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 }
 
-url_izin="https://raw.githubusercontent.com/hokagevpnlegend9999/ijin/main/beta"
+url_izin="https://raw.githubusercontent.com/hokagelegend9999/ijin/main/beta"
 ipsaya=$(curl -sS ipv4.icanhazip.com)
 data_server=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 date_list=$(date +"%Y-%m-%d" -d "$data_server")
@@ -56,7 +56,7 @@ echo -e "            \033[0;35mPERMISSION DENIED !${exitsc}"
 echo -e "   ${j}Your VPS${exitsc} $ipsaya ${j}Has been Banned${exitsc}"
 echo -e "     ${j}Buy access permissions for scripts${exitsc}"
 echo -e "             ${j}Contact Admin :${exitsc}"
-echo -e "      \033[0;36mWhatsapp${exitsc} wa.me/087726917005"
+echo -e "      \033[0;36mWhatsapp${exitsc} wa.me/6285879296673"
 lane
 exit
 fi
@@ -68,17 +68,17 @@ function create(){
 clear
 
 garis
-echo -e "${GREEN}| \E[44;1;39m      hokagevpnLegend  CREATE            \E[0m|"
+echo -e "${GREEN}| \E[44;1;39m      HOKAGE-VPN  CREATE            \E[0m|"
 garis
 read -p "Username: " user
 read -p "Password: " pass
 read -p "Exp (0 for unlimited days):" exp
 read -p "IP LIMIT " ip
 
-if [ ! -e /etc/hokagevpnLegendstore/limit/hokagevpn/ip/ ]; then
-  mkdir -p /etc/hokagevpnLegendstore/limit/hokagevpn/ip/
+if [ ! -e /etc/Hokagestore/limit/kage/ip/ ]; then
+  mkdir -p /etc/Hokagestore/limit/kage/ip/
 fi
-echo "$ip" > /etc/hokagevpnLegendstore/limit/hokagevpn/ip/$user
+echo "$ip" > /etc/Hokagestore/limit/kage/ip/$user
 
 hokagevpn --add-user $user $pass --expired-user $user $exp
 
@@ -86,7 +86,7 @@ hokagevpn --add-user $user $pass --expired-user $user $exp
 clear
 
 garis
-echo -e "${CY}| \E[44;1;39m      hokagevpnLegend ACCOUNT            \E[0m|"
+echo -e "${CY}| \E[44;1;39m      HOKAGE-VPN ACCOUNT            \E[0m|"
 garis
 echo ""
 echo -e "DOMAIN : $( cat /etc/xray/domain )"
@@ -109,7 +109,7 @@ echo ""
 
 echo -e "EMzhKvWX2V7h3pHP5ez/k2i1XMhdPh6WVetdSik3kr0f3ynS23Mmfh5NGzbqCme3KqV+1w0AXMwr5G4BL79FI2WDZ+hGmIaghQ+vzEkFlE4lgn3fP5qzJ7k5CTitksAnO3YWNDx1IdvPtwgn/2YEOlBKE4UmV7LMFlg+mWOqWIkFSbK9j2tIqFlAzJDLw+U7IKlPt5AZt/JAolrw9HEv5NN2892l9HwnK2MZcf8AfwCHhcOJLsiOJZOTCP+ywEz2iGXzg40aIdHpcAXJP6Zk+yWj23km5S9yUjq04enD6n2gVkYuA0dNgrprDnWwSH9VgNHyDBbBtwUTsSo7kWbrXgJhk+YS3Hr3I0sCHet6wNGwcEIBdrFqMEyJOd3pFZiO9TBR0xKn76P4A85WjbttuqeXrOAGb50U4Ru/5PKB8C8111w8fd7Djdl+w+DcUjLIEv/t38zX1QAhuE2IvIG3KJTSNFFYVoyvqYbbLCZSBw1f6neAdkYwUffzMVmcagTHqHvHrHWUBgCxH2g1cdhGxKDfoztC0J4mLde64nh+f9Yb9+8YuudG9W69+mhVxhoVSxJZrJ4yNq4JJ48sDjOgYCOXbwZdfuwLs+Y5wjqLqxa9YxXRrJoVIA=="
 garis
-echo -e "${GREEN}| \E[44;1;39m      hokagevpn STORE            \E[0m|"
+echo -e "${GREEN}| \E[44;1;39m      HOKAGE STORE            \E[0m|"
 garis
 
 }
@@ -118,19 +118,19 @@ garis
 function delete(){
 clear
 garis
-echo -e "${GREEN}| \E[44;1;39m      °hokagevpn DELETE°            \E[0m|"
+echo -e "${GREEN}| \E[44;1;39m      °HOKAGE-VPN DELETE°            \E[0m|"
 garis
 read -p "username :" user
 
 hokagevpn --remove-user $user
 clear
 garis
-echo -e "${GREEN}| \E[44;1;39m      °hokagevpn DELETED!°            \E[0m|"
+echo -e "${GREEN}| \E[44;1;39m      °HOKAGE-VPN DELETED!°            \E[0m|"
 garis
 echo "USERNAME: $user"
 echo "Delete success!!"
 garis
-echo -e "${GREEN}| \E[44;1;39m      hokagevpn STORE            \E[0m|"
+echo -e "${GREEN}| \E[44;1;39m      HOKAGE STORE            \E[0m|"
 garis
 }
 
@@ -138,19 +138,19 @@ garis
 function renew(){
 clear
 garis
-echo -e "${GREEN}| \E[44;1;39m      °hokagevpn RENEW°            \E[0m|"
+echo -e "${GREEN}| \E[44;1;39m      °HOKAGE-VPN RENEW°            \E[0m|"
 garis
 read -p "username: " user
 read -p "expired?: " exp
 hokagevpn --renew-user $user --expired-user $user $exp
 clear
 garis
-echo -e "${GREEN}| \E[44;1;39m      °hokagevpn RENEW!°            \E[0m|"
+echo -e "${GREEN}| \E[44;1;39m      °HOKAGE-VPN RENEW!°            \E[0m|"
 garis
 echo "USERNAME: $user"
 echo "renew success!!"
 garis
-echo -e "${GREEN}| \E[44;1;39m      hokagevpn STORE            \E[0m|"
+echo -e "${GREEN}| \E[44;1;39m      HOKAGE STORE            \E[0m|"
 garis
 }
 
@@ -160,18 +160,18 @@ garis
 function lock(){
 clear
 garis
-echo -e "${GREEN}| \E[44;1;39m      °hokagevpn LOCK°            \E[0m|"
+echo -e "${GREEN}| \E[44;1;39m      °HOKAGE-VPN LOCK°            \E[0m|"
 garis
 read -p "username: " user
 hokagevpn --block-user $user
 clear
 garis
-echo -e "${GREEN}| \E[44;1;39m      °hokagevpn LOCK!°            \E[0m|"
+echo -e "${GREEN}| \E[44;1;39m      °HOKAGE-VPN LOCK!°            \E[0m|"
 garis
 echo "USERNAME: $user"
 echo "locked success!!"
 garis
-echo -e "${GREEN}| \E[44;1;39m      hokagevpn STORE            \E[0m|"
+echo -e "${GREEN}| \E[44;1;39m      HOKAGE STORE            \E[0m|"
 garis
 }
 
@@ -184,12 +184,12 @@ function show(){
 
 clear
 garis
-echo -e "${GREEN}| \E[44;1;39m      °hokagevpn MEMBER!°            \E[0m|"
+echo -e "${GREEN}| \E[44;1;39m      °HOKAGE-VPN MEMBER!°            \E[0m|"
 garis
 hokagevpn --info-all-user | awk '/^\s*\+.*-> active/ {gsub(/(issued\(yyyymmdd\)|hash_key): [0-9a-f]+/, ""); print; getline; print; getline; getline; getline; print; print "═══════════════════"}'
 
 garis
-echo -e "${GREEN} \E[44;1;39m      hokagevpn STORE            \E[0m"
+echo -e "${GREEN} \E[44;1;39m      HOKAGE STORE            \E[0m"
 garis
 }
 
@@ -198,18 +198,18 @@ garis
 function unlock(){
 clear
 garis
-echo -e "${GREEN}| \E[44;1;39m      °hokagevpn UNLOCK°            \E[0m|"
+echo -e "${GREEN}| \E[44;1;39m      °HOKAGE-VPN UNLOCK°            \E[0m|"
 garis
 read -p "username: " user
 hokagevpn --unblock-user $user
 clear
 garis
-echo -e "${GREEN}| \E[44;1;39m      °hokagevpnLegend UNLOCK!°            \E[0m|"
+echo -e "${GREEN}| \E[44;1;39m      °HOKAGE-VPN UNLOCK!°            \E[0m|"
 garis
 echo "USERNAME: $user"
 echo "unlocked success!!"
 garis
-echo -e "${GREEN}| \E[44;1;39m      hokagevpnLegend STORE            \E[0m|"
+echo -e "${GREEN}| \E[44;1;39m      HOKAGE STORE            \E[0m|"
 garis
 }
 
@@ -218,7 +218,7 @@ garis
 function remove(){
 clear
 garis
-echo -e "${GREEN}| \E[44;1;39m      hokagevpnLegend UNLOCK            \E[0m|"
+echo -e "${GREEN}| \E[44;1;39m      HOKAGE-VPN UNLOCK            \E[0m|"
 garis
 
 read -p "Apakah Anda ingin menghapus semua user? (Y/N): " choice
@@ -236,12 +236,12 @@ fi
 
 clear
 garis
-echo -e "${GREEN}| \E[44;1;39m      °hokagevpnLegend UNLOCK!°            \E[0m|"
+echo -e "${GREEN}| \E[44;1;39m      °HOKAGE-VPN UNLOCK!°            \E[0m|"
 garis
 echo "USERNAME: $user"
 echo "unlocked success!!"
 garis
-echo -e "${GREEN}| \E[44;1;39m     hokagevpnLegend STORE            \E[0m|"
+echo -e "${GREEN}| \E[44;1;39m     HOKAGE STORE            \E[0m|"
 garis
 }
 
@@ -250,21 +250,21 @@ garis
 
 clear
 garis
-echo -e "${GREEN} \E[44;1;39m     ALL MENU NOOBZVPN            \E[0m"
+echo -e "${GREEN} \E[44;1;39m     ALL MENU HOKAGE-VPN            \E[0m"
 garis
 
 
 echo -e "${LIGHT}"
-echo -e "[01] CREATE ACCOUNT hokagevpn"
-echo -e "[02] DELETE ACCOUNT hokagevpn"
-echo -e "[03] RENEW ACCOUNT hokagevpn"
-echo -e "[04] LOCK ACCOUNT hokagevpn"
-echo -e "[05] UNLOCK ACCOUNT hokagevpn"
-echo -e "[06] SHOW ALL USER hokagevpn"
-echo -e "[07] REMOVE ALL USER hokagevpn"
+echo -e "[01] CREATE ACCOUNT HOKAGEVPN"
+echo -e "[02] DELETE ACCOUNT HOKAGEVPN"
+echo -e "[03] RENEW ACCOUNT HOKAGEVPNn"
+echo -e "[04] LOCK ACCOUNT HOKAGEVPN"
+echo -e "[05] UNLOCK ACCOUNT HOKAGEVPN"
+echo -e "[06] SHOW ALL USER HOKAGEVPN"
+echo -e "[07] REMOVE ALL USER HOKAGEVPN"
 echo -e "[00] BACK TO MAIN MENU"
 garis
-echo -e "${GREEN} \E[44;1;39m            hokagevpnLegend STORE            \E[0m"
+echo -e "${GREEN} \E[44;1;39m            HOKAGE STORE            \E[0m"
 garis
 echo -e ""
 echo
