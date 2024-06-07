@@ -3,7 +3,9 @@ dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Dat
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 ###########- COLOR CODE -##############
 echo -e " [INFO] Hapus File Sebelum Nya..."
-echo -e "\033[0;33m]\033[1;37m -\033[1;32m Menhapus  pembaharuan...!\033[1;37m"
+sleep 2
+echo -e " [INFO] Hapus File Menu"
+sleep 2
     cd /usr/bin
     rm fv-tunnel
     rm add-bot-notif
@@ -79,8 +81,9 @@ echo -e "\033[0;33m]\033[1;37m -\033[1;32m Menhapus  pembaharuan...!\033[1;37m"
     rm xp
     rm z9dtrial
 
-    clear
-    echo -e "\033[0;33m]\033[1;37m -\033[1;32m memasang  pembaharuan...!\033[1;37m"
+clear
+sleep 2
+echo -e " [INFO] Downloading Update System"
     
     wget https://raw.githubusercontent.com/hokagelegend9999/beta/main/config/fv-tunnel
     wget https://raw.githubusercontent.com/hokagelegend9999/beta/main/menu/menu
@@ -232,8 +235,7 @@ echo -e "\033[0;33m]\033[1;37m -\033[1;32m Menhapus  pembaharuan...!\033[1;37m"
     chmod +x z9dtrial
     
     
-sleep 2
-echo -e " [INFO] Downloading Update System"
+
 sleep 2
 echo -e " [INFO] Update Successfully"
 sleep 2
