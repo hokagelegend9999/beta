@@ -82,7 +82,7 @@ echo -e "\033[0;33m]\033[1;37m -\033[1;32m Menhapus  pembaharuan...!\033[1;37m"
     clear
     echo -e "\033[0;33m]\033[1;37m -\033[1;32m memasang  pembaharuan...!\033[1;37m"
     
-    wget -qO- fv-tunnel "https://raw.githubusercontent.com/hokagelegend9999/beta/main/config/fv-tunnel" 
+    wget https://raw.githubusercontent.com/hokagelegend9999/beta/main/config/fv-tunnel
     wget https://raw.githubusercontent.com/hokagelegend9999/beta/main/menu/menu
     wget https://raw.githubusercontent.com/hokagelegend9999/beta/main/menu/m-sshws
     wget https://raw.githubusercontent.com/hokagelegend9999/beta/main/menu/addssh
@@ -123,6 +123,8 @@ echo -e "\033[0;33m]\033[1;37m -\033[1;32m Menhapus  pembaharuan...!\033[1;37m"
     wget https://raw.githubusercontent.com/hokagelegend9999/beta/main/menu/mbot-backup
     wget https://raw.githubusercontent.com/hokagelegend9999/beta/main/menu/mbot-panel
     wget https://raw.githubusercontent.com/hokagelegend9999/beta/main/menu/member
+    wget https://raw.githubusercontent.com/hokagelegend9999/beta/main/menu/renewssh
+    wget https://raw.githubusercontent.com/hokagelegend9999/beta/main/menu/renewws
     wget https://raw.githubusercontent.com/hokagelegend9999/beta/main/menu/member-ws
     wget https://raw.githubusercontent.com/hokagelegend9999/beta/main/menu/menu-x
      wget https://raw.githubusercontent.com/hokagelegend9999/beta/main/menu/m-noob
