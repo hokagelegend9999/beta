@@ -27,7 +27,86 @@ fun_bar() {
     tput cnorm
 }
 res1() {
+clear
+echo -e "\033[0;33m]\033[1;37m -\033[1;32m Menhapus  pembaharuan...!\033[1;37m"
     cd /usr/bin
+    rm fv-tunnel
+    rm add-bot-notif
+    rm addhost
+    rm addss
+    rm addssh
+    rm addtr
+    rm addvless
+    rm addws
+    rm autokill
+    rm autoreboot
+    rm backup
+    rm bot
+    rm bw
+    rm ceklim
+    rm cekss
+    rm cekssh
+    rm cektr
+    rm cekvless
+    rm cekws
+    rm clearcache
+    rm clearlog
+    rm del-bot-notif
+    rm delexp
+    rm delss
+    rm delssh
+    rm deltr
+    rm delvless
+    rm delws
+    rm fixcert
+    rm hapus-bot
+    rm limit-ip-ssh
+    rm limitspeed
+    rm lock
+    rm m-bot
+    rm mbot-backup
+    rm mbot-panel
+    rm member
+    rm member-ws
+    rm menu
+    rm menu-backup
+    rm menu-x
+    rm m-noob
+    rm m-sshws
+    rm m-ssws
+    rm m-trial
+    rm m-trojan
+    rm m-vless
+    rm m-vmess
+    rm prot
+    rm regis
+    rm renewss
+    rm renewssh
+    rm renewtr
+    rm renewvless
+    rm renewws
+    rm reset
+    rm restart
+    rm restart-bot
+    rm restore
+    rm run
+    rm sd
+    rm speedtest
+    rm stop-bot
+    rm tendang
+    rm trial
+    rm trialss
+    rm trialtr
+    rm trialvless
+    rm trialws
+    rm tunnel
+    rm unlock
+    rm xp
+    rm z9dtrial
+
+    clear
+    echo -e "\033[0;33m]\033[1;37m -\033[1;32m memasang  pembaharuan...!\033[1;37m"
+    
     wget -qO- fv-tunnel "https://raw.githubusercontent.com/hokagelegend9999/beta/main/config/fv-tunnel" 
     wget https://raw.githubusercontent.com/hokagelegend9999/beta/main/menu/menu
     wget https://raw.githubusercontent.com/hokagelegend9999/beta/main/menu/m-sshws
