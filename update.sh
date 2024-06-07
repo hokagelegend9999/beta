@@ -1,33 +1,8 @@
 #!/bin/bash
-clear
-fun_bar() {
-    CMD[0]="$1"
-    CMD[1]="$2"
-    (
-        [[ -e $HOME/fim ]] && rm $HOME/fim
-        ${CMD[0]} -y >/dev/null 2>&1
-        ${CMD[1]} -y >/dev/null 2>&1
-        touch $HOME/fim
-    ) >/dev/null 2>&1 &
-    tput civis
-    echo -ne "  \033[0;33mPlease Wait Loading \033[1;37m- \033[0;33m["
-    while true; do
-        for ((i = 0; i < 18; i++)); do
-            echo -ne "\033[0;32m#"
-            sleep 0.1s
-        done
-        [[ -e $HOME/fim ]] && rm $HOME/fim && break
-        echo -e "\033[0;33m]"
-        sleep 1s
-        tput cuu1
-        tput dl1
-        echo -ne "  \033[0;33mPlease Wait Loading \033[1;37m- \033[0;33m["
-    done
-    echo -e "\033[0;33m]\033[1;37m -\033[1;32m OK !\033[1;37m"
-    tput cnorm
-}
-res1() {
-clear
+dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
+biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
+###########- COLOR CODE -##############
+echo -e " [INFO] Hapus File Sebelum Nya..."
 echo -e "\033[0;33m]\033[1;37m -\033[1;32m Menhapus  pembaharuan...!\033[1;37m"
     cd /usr/bin
     rm fv-tunnel
@@ -255,25 +230,9 @@ echo -e "\033[0;33m]\033[1;37m -\033[1;32m Menhapus  pembaharuan...!\033[1;37m"
     chmod +x z9dtrial
     
     
-   
-}
-function hokagevpns() {
-wget "${REPO}/hokagevpn.zip"
-unzip hokagevpn.zip
-bash install.sh
-rm hokagevpn.zip
-systemctl restart hokagevpn
-print_success "HOKAGEVPN"
-}
-netfilter-persistent
-clear
-echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | lolcat
-echo -e " \e[1;97;101m UPDATE SCRIPT SEDANG BERJALAN !             \e[0m"
-echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | lolcat
-echo -e ""
-echo -e "  \033[1;91m Update Script Service\033[1;37m"
-fun_bar 'res1'
-echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | lolcat
-echo -e ""
-read -n 1 -s -r -p "Press [ Enter ] to back on menu"
-menu
+sleep 2
+echo -e " [INFO] Downloading Update System"
+sleep 2
+echo -e " [INFO] Update Successfully"
+sleep 2
+exit
