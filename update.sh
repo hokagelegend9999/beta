@@ -239,4 +239,6 @@ echo -e " [INFO] Downloading Update System"
 sleep 2
 echo -e " [INFO] Update Successfully"
 sleep 2
+cd
+rm update.sh
 exit
