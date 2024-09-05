@@ -39,6 +39,16 @@ Jika Statsus Service Masih Off
 Silahkan Reboot vps kalian
 ```
 
+```
+Jika gagal di tengah jalan saat installasi **
+
+1.ketikan
+./setup.sh (lalu enter)
+
+untuk mengulang installasi
+
+```
+
 
 - Langkah 1: 
 Membuat Bot di Telegram
