@@ -975,6 +975,9 @@ rm -rf /root/README.md
 rm -rf /root/domain
 #sudo hostnamectl set-hostname $user
 secs_to_human "$(($(date +%s) - ${start}))"
+# Pastikan variabel $username sudah diinisialisasi
+username="nama_pengguna"
+
 sudo hostnamectl set-hostname $username
 echo ""
 echo "------------------------------------------------------------"
