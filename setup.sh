@@ -935,7 +935,7 @@ print_install "Enable Service"
 }
 
 # Fingsi Install Script
-function instal {
+function instal(){
 clear
     first_setup
     nginx_install
@@ -974,20 +974,13 @@ rm -rf /root/LICENSE
 rm -rf /root/README.md
 rm -rf /root/domain
 #sudo hostnamectl set-hostname $user
-secs_to_human() {
-  echo "$(($1 / 3600))h $((($1 % 3600) / 60))m $(($1 % 60))s"
-}
-
-start=$(date +%s)  # Inisialisasi variabel start
-# Pastikan variabel $username sudah diinisialisasi
-username="nama_pengguna"
-
+secs_to_human "$(($(date +%s) - ${start}))"
 sudo hostnamectl set-hostname $username
 echo ""
 echo "------------------------------------------------------------"
 echo ""
-echo "   >>> Service & Port" | tee -a log-install.txt
-echo "   - OpenSSH                 : 22, 53, 2222, 2269" | tee -a log-install.txt
+echo "   >>> Service & Port"  | tee -a log-install.txt
+echo "   - OpenSSH                 : 22, 53, 2222, 2269"  | tee -a log-install.txt
 echo "   - SSH Websocket           : 80" | tee -a log-install.txt
 echo "   - SSH SSL Websocket       : 443" | tee -a log-install.txt
 echo "   - Stunnel5                : 222, 777" | tee -a log-install.txt
@@ -1002,14 +995,14 @@ echo "   - Trojan GRPC             : 443" | tee -a log-install.txt
 echo "   - Trojan WS               : 443" | tee -a log-install.txt
 echo "   - Trojan GO               : 443" | tee -a log-install.txt
 echo "   - Sodosok WS/GRPC         : 443" | tee -a log-install.txt
-echo "   - SLOWDNS                 : 53" | tee -a log-install.txt
-echo "" | tee -a log-install.txt
-echo "   >>> Server Information & Other Features" | tee -a log-install.txt
-echo "   - Timezone                : Asia/Jakarta (GMT +7)" | tee -a log-install.txt
-echo "   - Fail2Ban                : [ON]" | tee -a log-install.txt
-echo "   - Dflate                  : [ON]" | tee -a log-install.txt
-echo "   - IPtables                : [ON]" | tee -a log-install.txt
-echo "   - Auto-Reboot             : [ON]" | tee -a log-install.txt
+echo "   - SLOWDNS                 : 53"  | tee -a log-install.txt
+echo ""  | tee -a log-install.txt
+echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
+echo "   - Timezone                : Asia/Jakarta (GMT +7)"  | tee -a log-install.txt
+echo "   - Fail2Ban                : [ON]"  | tee -a log-install.txt
+echo "   - Dflate                  : [ON]"  | tee -a log-install.txt
+echo "   - IPtables                : [ON]"  | tee -a log-install.txt
+echo "   - Auto-Reboot             : [ON]"  | tee -a log-install.txt
 echo "   - IPv6                    : [OFF]"  | tee -a log-install.txt
 echo "   - Autobackup Data" | tee -a log-install.txt
 echo "   - AutoKill Multi Login User" | tee -a log-install.txt
