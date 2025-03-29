@@ -935,7 +935,7 @@ print_install "Enable Service"
 }
 
 # Fingsi Install Script
-function instal(){
+function instal {
 clear
     first_setup
     nginx_install
@@ -974,7 +974,11 @@ rm -rf /root/LICENSE
 rm -rf /root/README.md
 rm -rf /root/domain
 #sudo hostnamectl set-hostname $user
-secs_to_human "$(($(date +%s) - ${start}))"
+secs_to_human() {
+  echo "$(($1 / 3600))h $((($1 % 3600) / 60))m $(($1 % 60))s"
+}
+
+start=$(date +%s)  # Inisialisasi variabel start
 # Pastikan variabel $username sudah diinisialisasi
 username="nama_pengguna"
 
