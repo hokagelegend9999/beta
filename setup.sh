@@ -601,7 +601,7 @@ print_success "Dropbear"
 function ins_udpSSH(){
 clear
 print_install "Menginstall Udp-custom"
-wget -q https://raw.githubusercontent.com/hokagelegend9999/beta/main/udp-custom/udp-custom.sh
+wget -q https://raw.githubusercontent.com/hokagelegend9999/beta/refs/heads/main/udp-custom/udp-custom.sh
 chmod +x udp-custom.sh 
 bash udp-custom.sh
 rm -fr udp-custom.sh
